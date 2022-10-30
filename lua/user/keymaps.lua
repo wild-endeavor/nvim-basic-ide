@@ -91,6 +91,7 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 keymap("n", "<leader>r", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>t", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>fs", "<cmd>lua require'telescope.builtin'.lsp_dynamic_workspace_symbols{}<CR>", opts)
+keymap("n", "<leader>fo", "<cmd>lua require'telescope.builtin'.oldfiles{}<CR>", opts)
 
 -- DAP
 keymap("n", "<C-r>", "<cmd>lua require'dap'.continue()<cr>", opts)
