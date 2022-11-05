@@ -1,22 +1,34 @@
 -- https://stackoverflow.com/questions/9721732/mapping-shift-arrows-to-selecting-characters-lines
 vim.cmd([[
-nmap <S-Up> v<Up>
-nmap <S-Down> v<Down>
-nmap <S-Left> v<Left>
-nmap <S-Right> v<Right>
-vmap <S-Up> <Up>
-vmap <S-Down> <Down>
-vmap <S-Left> <Left>
-vmap <S-Right> <Right>
-imap <S-Up> <Esc>v<Up>
-imap <S-Down> <Esc>v<Down>
-imap <S-Left> <Esc>v<Left>
-imap <S-Right> <Esc>v<Right>
+nnoremap <S-Up> v<Up>
+nnoremap <S-Down> v<Down>
+nnoremap <S-Left> v<Left>
+nnoremap <S-Right> v<Right>
+vnoremap <S-Up> <Up>
+vnoremap <S-Down> <Down>
+vnoremap <S-Left> <Left>
+vnoremap <S-Right> <Right>
+inoremap <S-Up> <Esc>v<Up>
+inoremap <S-Down> <Esc>v<Down>
+inoremap <S-Left> <Esc>v<Left>
+inoremap <S-Right> <Esc>v<Right>
 ]])
 vim.cmd([[
-noremap <silent> <C-S>          :update<CR>
-vnoremap <silent> <C-S>         <C-C>:update<CR>
-inoremap <silent> <C-S>         <C-O>:update<CR>
+noremap <silent> <C-s>          :wa<CR>
+vnoremap <silent> <C-s>         <C-C>:wa<CR>
+inoremap <silent> <C-s>         <C-O>:wa<CR>
+inoremap <silent> <D-s>         <C-O>:wa<CR>
+
+inoremap <M-BS> <C-w>
+inoremap <M-Del> <C-o>dw
+]])
+
+-- ctrl a and e
+vim.cmd([[
+inoremap <C-a> <C-o>^
+inoremap <C-e> <C-o>$
+nnoremap <C-a> ^
+nnoremap <C-e> $
 ]])
 
 vim.cmd([[
