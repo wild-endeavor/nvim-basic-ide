@@ -94,7 +94,7 @@ keymap("n", "<leader>fs", "<cmd>lua require'telescope.builtin'.lsp_dynamic_works
 keymap("n", "<leader>fo", "<cmd>lua require'telescope.builtin'.oldfiles{}<CR>", opts)
 
 -- DAP
-keymap("n", "<C-r>", "<cmd>lua require'dap'.continue()<cr>", opts)
+keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opts)
 keymap("n", "<F7>", "<cmd>lua require'dap'.step_into()<cr>", opts)
 keymap("n", "<F8>", "<cmd>lua require'dap'.step_over()<cr>", opts)
 keymap("n", "<leader>td", "<cmd>lua require'dap-go'.debug_test()<cr>", opts)
