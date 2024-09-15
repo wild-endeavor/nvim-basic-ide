@@ -31,12 +31,17 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<C-PageDown>", ":bnext<CR>", opts)
+keymap("n", "<C-PageUp>", ":bprevious<CR>", opts)
+keymap("i", "<C-PageDown>", ":bnext<CR>", opts)
+keymap("i", "<C-PageUp>", ":bprevious<CR>", opts)
+
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
 -- Close buffers
-keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<C-w>", "<cmd>Bdelete!<CR>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
@@ -78,3 +83,18 @@ keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
 keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
+
+
+------- Personal -------
+-- LSP and Telescope
+keymap("n", "<leader>r", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>t", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>fs", "<cmd>lua require'telescope.builtin'.lsp_dynamic_workspace_symbols{}<CR>", opts)
+keymap("n", "<leader>fo", "<cmd>lua require'telescope.builtin'.oldfiles{}<CR>", opts)
+
+-- DAP
+keymap("n", "<C-r>", "<cmd>lua require'dap'.continue()<cr>", opts)
+keymap("n", "<F7>", "<cmd>lua require'dap'.step_into()<cr>", opts)
+keymap("n", "<F8>", "<cmd>lua require'dap'.step_over()<cr>", opts)
+keymap("n", "<leader>td", "<cmd>lua require'dap-go'.debug_test()<cr>", opts)

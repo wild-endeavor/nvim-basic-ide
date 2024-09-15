@@ -21,6 +21,7 @@ require "user.alpha"
 require "user.lsp"
 require "user.dap"
 require "user.personal"
+require "user.dapgo"
 
 -- maybe try in the future https://github.com/simrat39/rust-tools.nvim/wiki/Debugging
 -- require "user.rust-tools"

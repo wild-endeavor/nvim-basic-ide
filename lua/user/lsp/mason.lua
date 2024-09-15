@@ -9,6 +9,7 @@ local servers = {
 	"yamlls",
 	"rust_analyzer",
 	"taplo",
+	"gopls",
 }
 
 local settings = {
